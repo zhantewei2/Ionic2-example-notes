@@ -1,4 +1,4 @@
-import {Component,ViewChild,ElementRef,Renderer} from '@angular/core';
+import {Component,ViewChild} from '@angular/core';
 
 @Component({
 	templateUrl:'test.html',
