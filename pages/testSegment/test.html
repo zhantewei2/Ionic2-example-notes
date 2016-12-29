@@ -1,0 +1,30 @@
+	<ion-header>
+		<ion-navbar>
+			<button ion-button menuToggle icon-left>
+				<ion-icon name='aperture'></ion-icon>
+				goBack
+			</button>
+			<ion-item style='text-align:center;background:transparent' no-lines>
+				My Fruit
+			</ion-item>
+			<form #fruitForm='ngForm' >
+			<ion-segment [(ngModel)]='segment' #basket='ngModel' name='segment' > 
+				<ion-segment-button value='strawberry'>strawberry </ion-segment-button>
+				<ion-segment-button value='pear'> pear</ion-segment-button>
+			</ion-segment>
+			</form>
+		</ion-navbar>
+	</ion-header>
+	<ion-content>
+		<my-stomach>
+			<my-strawberry *ngIf='show.strawberry'></my-strawberry>
+			<my-pear *ngIf='show.pear' ></my-pear>
+		</my-stomach>
+
+	</ion-content>
+		
+	<ion-footer> 
+		<ion-toolbar> 
+			<ion-title> Footer</ion-title>
+		</ion-toolbar>
+	</ion-footer>
